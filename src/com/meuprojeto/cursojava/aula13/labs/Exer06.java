@@ -14,8 +14,8 @@ public class Exer06 {
 		System.out.println("Digite o valor do raio:");
 		double raio = scan.nextDouble();
 		
-		double areaCirculo = 3.14 * (Math.pow(raio,2));
-		System.out.println("Resultado do cáluclo de área do círculo = " + areaCirculo);
+		double areaCirculo = Math.PI  * (Math.pow(raio,2));
+		System.out.printf("Resultado do cáluclo de área do círculo = " + "%.2f", areaCirculo);
 		
 		scan.close();
 	}

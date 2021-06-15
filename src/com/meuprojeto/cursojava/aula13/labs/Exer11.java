@@ -13,15 +13,17 @@ public class Exer11 {
 		
 		System.out.println("Digite num1:");
 		int num1 = scan.nextInt();
+		
 		System.out.println("Digite num2:");
 		int num2 = scan.nextInt();
-		System.out.println("Digite num3:");
-		float num3 = scan.nextFloat();
 		
-		double calculo01 = (2*num1) *(num2/2);
+		System.out.println("Digite num3:");
+		double num3 = scan.nextDouble();
+		
+		double calculo01 = (2 * num1) *(num2 / 2);
 		System.out.println("Resultado cálculo01 = " + calculo01);
 		
-		double calculo02 = (3*num1) + num3;
+		double calculo02 = (3 * num1) + num3;
 		System.out.println("Resultado cálculo02 = " + calculo02);
 		
 		double calculo03 = Math.pow(num3, 3);

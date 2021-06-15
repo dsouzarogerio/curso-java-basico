@@ -17,7 +17,7 @@ public class Exer07 {
 		double areaQuadrado = Math.pow(ladoQuadrado, 2);
 		System.out.println("Resultado da área do quadrado = " + areaQuadrado);
 		
-		System.out.println("Valor da área ao quadrado = " + (2 * areaQuadrado ));
+		System.out.println("Valor da área do quadrado em dobro = " + (2 * areaQuadrado ));
 		
 		scan.close();
 		}

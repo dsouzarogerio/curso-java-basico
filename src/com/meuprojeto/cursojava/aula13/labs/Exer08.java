@@ -12,12 +12,12 @@ public class Exer08 {
 		System.out.println("======================================");
 		
 		System.out.println("Digite o valor do salário por hora:");
-		double salHora = scan.nextDouble();
+		double valorHora = scan.nextDouble();
 		
 		System.out.println("Digite a quantidade de horas trabalhadas no Mês:");
 		double hsTrabahadasMes = scan.nextDouble();
 		
-		double calculoSalario = salHora * hsTrabahadasMes;
+		double calculoSalario = valorHora * hsTrabahadasMes;
 		System.out.println("Valor do salário no mês = " + calculoSalario);
 		
 		scan.close();

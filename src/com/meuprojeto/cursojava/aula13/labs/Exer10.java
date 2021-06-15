@@ -12,9 +12,10 @@ public class Exer10 {
 		System.out.println("======================================");
 		
 		System.out.println("Digite o valor da temperatura em Celsius");
-		int valorCelsius = scan.nextInt();
-		int convParaFarenheit = 32 + (valorCelsius * 9 / 5);
-		System.out.println("Conversão de Celsius para Farenheit = " + convParaFarenheit + "°F");
+		double valorCelsius = scan.nextDouble();
+		double convParaFarenheit = 32 + (valorCelsius * 9 / 5);
+		System.out.println("O valor da temperatura Celsius de " + valorCelsius + "°C " 
+				+ "em Farenheit = " +  convParaFarenheit + "°F");	
 		
 		scan.close();
 		
