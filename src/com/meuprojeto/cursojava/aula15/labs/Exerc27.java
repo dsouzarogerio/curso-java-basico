@@ -11,41 +11,39 @@ public class Exerc27 {
 		System.out.println("===========================\n");
 
 		// selecionar o tipo de produto
-		System.out.println("Entre com o tipo do produto");
-		String produto = scan.next();
+		System.out.println("Entre com a qtd kg morango");
+		double qtdKgMorango = scan.nextDouble();
 
-		System.out.println("Entre com a quantidade em kg");
-		double qtdKg = scan.nextDouble();
-		double vrProduto = qtdKg * 1;
+		System.out.println("Entre com a qtd kg maçã");
+		double qtdKgMaca = scan.nextDouble();
 
-		if (produto.equalsIgnoreCase("Maçã"))
-			if (qtdKg <= 5) {
-				vrProduto = qtdKg * 1.80;
-				System.out.println("Valor da compra = " + vrProduto);
-			} else if (qtdKg > 5 && qtdKg <= 8) {
-				vrProduto = qtdKg * 1.50;
-				System.out.println("Valor da compra = " + vrProduto);
-			} else if (qtdKg > 8 || vrProduto >= 25) {
-				vrProduto = qtdKg * 1.50;
-				double desconto = (vrProduto / 100) * 10;
-				double vrTotal = vrProduto - desconto;
-				System.out.println("Valor total com desconto = " + vrTotal);
-			}
+		double precoKgMorango = 0;
 
-		if (produto.equalsIgnoreCase("Morango")) {
-			if (qtdKg <= 5) {
-				vrProduto = qtdKg * 2.50;
-				System.out.println("Valor da compra = " + vrProduto);
-			} else if (qtdKg > 5 && qtdKg < 8) {
-				vrProduto = qtdKg * 2.20;
-				System.out.println("Valor da compra = " + vrProduto);
-			} else if (qtdKg > 8 || vrProduto >= 25) {
-				vrProduto = qtdKg * 2.20;
-				double desconto = (vrProduto / 100) * 10;
-				double vrTotal = vrProduto - desconto;
-				System.out.println("Valor total com desconto = " + vrTotal);
-			}
-			scan.close();
+		if (qtdKgMorango <= 5) {
+			precoKgMorango = 2.5;
+		} else {
+			precoKgMorango = 2.2;
 		}
+
+		double precoKgMaca = 0;
+
+		if (qtdKgMaca <= 5) {
+			precoKgMaca = 1.8;
+		} else {
+			precoKgMaca = 1.5;
+		}
+
+		double precoTotalMorango = qtdKgMorango * precoKgMorango;
+		double precoTotalMaca = qtdKgMaca * precoKgMaca;
+
+		double precoParcial = precoTotalMorango + precoTotalMaca;
+		double precoTotal = precoParcial;
+
+		if ((qtdKgMorango + qtdKgMaca > 8) || precoParcial > 25) {
+			precoTotal = precoParcial - (precoParcial / 100) * 10;
+		}
+		System.out.println("Preço Total = " + precoTotal);
+
+		scan.close();
 	}
 }

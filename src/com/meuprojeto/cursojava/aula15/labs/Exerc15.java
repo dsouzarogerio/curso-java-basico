@@ -9,22 +9,30 @@ public class Exerc15 {
 
 		System.out.println("Lados de um triângulo");
 		System.out.println("===========================\n");
-		
-		System.out.println("Digite os lados do triângulo");
+
+		System.out.println("Entre com o lado1:");
 		double lado1 = scan.nextDouble();
+
+		System.out.println("Entre com o lado2:");
 		double lado2 = scan.nextDouble();
+
+		System.out.println("Entre com o lado3:");
 		double lado3 = scan.nextDouble();
-		
-		if (((lado1 + lado2) > lado3) || ((lado1 + lado3) > lado2) || ((lado2 + lado3) > lado1)){
-			System.out.println("Isto é um triângulo.");
-		} if (lado1 == lado2 && lado2 == lado3 && lado1 == lado3) {
-			System.out.println("Triângulo equilátero");
-		} 
-		else if(lado1 == lado2 || lado2 == lado3 || lado1 == lado3) {
-			System.out.println("Triângulo isósceles.");
-		} 
-		else if(lado1 != lado2 || lado2 != lado3 || lado1 != lado3) {
-			System.out.println("Triângulo escaleno.");
+
+		if (((lado1 + lado2) > lado3) 
+				|| ((lado1 + lado3) > lado2) 
+				|| ((lado2 + lado3) > lado1)) {
+			
+			if (lado1 == lado2 && lado1 == lado3 && lado2 == lado3) {
+				System.out.println("Triângulo equilátero");
+			} else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
+				System.out.println("Triângulo isósceles.");
+			} else if (lado1 != lado2 && lado1 != lado3 && lado2 != lado3) {
+				System.out.println("Triângulo escaleno.");
+			}
+			
+		} else {
+			System.out.println("Não é um triânuglo.");
 		}
 		scan.close();
 	}

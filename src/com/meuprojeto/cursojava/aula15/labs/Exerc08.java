@@ -11,21 +11,21 @@ public class Exerc08 {
 		System.out.println("Mostrar o produto mais barato");
 		System.out.println("===========================\n");
 		
-		System.out.println("Digite o preço do produto 1: ");
-		double prod1 = scan.nextDouble(); 
+		System.out.println("Digite o preço 1: ");
+		double preco1 = scan.nextDouble(); 
 		
-		System.out.println("Digite o preço do produto 2: ");
-		double prod2 = scan.nextDouble(); 
+		System.out.println("Digite o preço 2: ");
+		double preco2 = scan.nextDouble(); 
 		
-		System.out.println("Digite o preço do produto 3: ");
-		double prod3 = scan.nextDouble(); 
+		System.out.println("Digite o preço 3: ");
+		double preco3 = scan.nextDouble(); 
 		
-		if (prod1 < prod2 & prod1 < prod3) {
-			System.out.printf("O valor do produto 1 é o mais barato!");
-		} else if (prod2 < prod1 & prod2 < prod3) {
-			System.out.printf("O valor do produto 2 é o mais barato!");
-		} else if(prod3 < prod1 & prod3 < prod2) {
-			System.out.printf("O valor do produto 3 é o mais barato!");
+		if (preco1 <= preco2 && preco1 <= preco3) {
+			System.out.printf("O preço 1 é o mais barato = " + preco1);
+		} else if (preco2 <= preco1 && preco2 <= preco3) {
+			System.out.printf("O preço 2 é o mais barato = " + preco2);
+		} else if(preco3 <= preco1 && preco3 < preco2) {
+			System.out.printf("O preço 3 é o mais barato = " + preco3);
 		}
 	scan.close();
 	}

@@ -37,7 +37,8 @@ public class Exerc16 {
 				System.out.println("O valor de x = " + x1);
 			} 
 			else if (delta > 0) {
-				System.out.println("O valor de x1 = " + x1 + " e x2 = " + x2);
+				System.out.println("O valor de x1 = " + x1);
+				System.out.println("O valor de x2 = " + x2);
 			}
 		}
 		scan.close();

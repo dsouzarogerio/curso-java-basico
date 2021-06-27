@@ -13,13 +13,11 @@ public class Exerc02 {
 		System.out.println("Digite um número inteiro:");
 		int num = scan.nextInt();
 		
-		if (num > 0) {
+		if (num >= 0) {
 			System.out.println("Este número é positivo");
-		} else if (num < 0){
-			System.out.println("Este número é negativo");
 		} else {
-			System.out.println("Este número é neutro.");
-		}
+			System.out.println("Este número é negativo");
+		} 
 		scan.close();
 		
 		

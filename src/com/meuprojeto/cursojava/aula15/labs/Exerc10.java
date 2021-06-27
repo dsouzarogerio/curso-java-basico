@@ -15,10 +15,13 @@ public class Exerc10 {
 		String turno = scan.next();
 		
 		switch(turno) {
+		case "m" : 
 		case "M" : System.out.println("Turno manhã -> Bom dia!"); break;
-		case "T" : System.out.println("Turno tarde -> Boa tarde!"); break;
+		case "v" : 
+		case "V" : System.out.println("Turno tarde -> Boa tarde!"); break;
+		case "n" : 
 		case "N" : System.out.println("Turno noite -> Boa noite!"); break;
-		default : System.out.println("Não é um valor válido.");
+		default : System.out.println("Não é uma opção válida.");
 		
 		scan.close();
 		}

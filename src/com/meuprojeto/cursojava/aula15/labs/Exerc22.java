@@ -15,7 +15,7 @@ public class Exerc22 {
 
 		if (num % 2 == 0) {
 			System.out.println("Este número é par.");
-		} else if (num % 2 == 1) {
+		} else {
 			System.out.println("Este número é ímpar.");
 		}
 		scan.close();

@@ -16,71 +16,35 @@ public class Exerc12 {
 
 		System.out.println("Digite as horas trabalhadas no mês:");
 		double hsTrab = scan.nextDouble();
-
 		double salarioBruto = vrHora * hsTrab;
-		System.out.printf("Valor do salário bruto (R$): " + "%.2f", salarioBruto);
 
-		// Regras desconto IR
-		double ir1 = salarioBruto / 100 * 0;
-		double ir2 = salarioBruto / 100 * 5;
-		double ir3 = salarioBruto / 100 * 10;
-		double ir4 = salarioBruto / 100 * 20;
-
-		double sindicato = salarioBruto / 100 * 3;
-
-		double fgts = salarioBruto / 100 * 11;
-
-		double inss = salarioBruto / 100 * 10;
+		int percentualIR = 0;
 
 		if (salarioBruto <= 900) {
-			System.out.printf("\nDesconto do IR (R$): " + "%.2f", ir1);
-			System.out.printf("\nDesconto Sindicato (R$): " + "%.2f", sindicato);
-			System.out.printf("\nDesconto do INSS (R$): " + "%.2f", inss);
-			System.out.printf("\nFGTS (R$): " + "%.2f", fgts);
-
-			double descontos = ir1 + sindicato + inss;
-			System.out.printf("\nTotal de descontos (R$): " + "%.2f", descontos);
-
-			double salLiquido = salarioBruto - descontos;
-			System.out.printf("\nSalário Liquido: " + "%.2f", salLiquido);
+			percentualIR = 0;
+		} else if (salarioBruto > 900 && salarioBruto <= 1500) {
+			percentualIR = 5;
+		} else if (salarioBruto > 1500 && salarioBruto <= 2500) {
+			percentualIR = 10;
+		} else if (salarioBruto > 2500) {
+			percentualIR = 20;
 		}
-		
-		else if (salarioBruto > 900 && salarioBruto <= 1500) {
-			System.out.printf("\nDesconto do IR (R$): " + "%.2f", ir2);
-			System.out.printf("\nDesconto Sindicato (R$): " + "%.2f", sindicato);
-			System.out.printf("\nDesconto do INSS (R$): " + "%.2f", inss);
-			System.out.printf("\nFGTS (R$): " + "%.2f", fgts);
 
-			double descontos = ir2 + sindicato + inss;
-			System.out.printf("\nTotal de descontos (R$): " + "%.2f", descontos);
-			
-			double salLiquido = salarioBruto - descontos;
-			System.out.printf("\nSalário Liquido: " + "%.2f", salLiquido);
-		}
-		else if (salarioBruto > 1500 && salarioBruto <= 2500) {
-			System.out.printf("\nDesconto do IR (R$): " + "%.2f", ir3);
-			System.out.printf("\nDesconto Sindicato (R$): " + "%.2f", sindicato);
-			System.out.printf("\nDesconto do INSS (R$): " + "%.2f", inss);
-			System.out.printf("\nFGTS (R$): " + "%.2f", fgts);
+		double ir = (salarioBruto / 100) * percentualIR;
+		double inss = (salarioBruto / 100) * 10;
+		double fgts = (salarioBruto / 100) * 11;
+		double sindicato = (salarioBruto / 100) * 3;
+		double totalDescontos = ir + sindicato + inss;
+		double salLiquido = salarioBruto - totalDescontos;
 
-			double descontos = ir3 + sindicato + inss;
-			System.out.printf("\nTotal de descontos (R$): " + "%.2f", descontos);
-			
-			double salLiquido = salarioBruto - descontos;
-			System.out.printf("\nSalário Liquido: " + "%.2f", salLiquido);
-		}
-		else if (salarioBruto >2500) {
-			System.out.printf("\nDesconto do IR (R$): " + "%.2f", ir4);
-			System.out.printf("\nDesconto Sindicato (R$): " + "%.2f", sindicato);
-			System.out.printf("\nDesconto do INSS (R$): " + "%.2f", inss);
-			System.out.printf("\nFGTS (R$): " + "%.2f", fgts);
-
-			double descontos = ir4 + sindicato + inss;
-			System.out.printf("\nTotal de descontos (R$): " + "%.2f", descontos);
-			
-			double salLiquido = salarioBruto - descontos;
-			System.out.printf("\nSalário Liquido: " + "%.2f", salLiquido);
-		}
+		System.out.println("Salário Bruto (" + vrHora + " * " + hsTrab + ") ----------:R$" + salarioBruto);
+		System.out.println("( - ) IR (" + percentualIR + "%) --------------------------:R$" + ir);
+		System.out.println("( - ) INSS ( 10%) ----------------------------------------: R$" + inss);
+		System.out.println("( - )Sindicato  ---------------------------------------------:R$" + sindicato);
+		System.out.println("FGTS ------------------------------------------------------:R$" + fgts);
+		System.out.println("Total de descontos -----------------------------------------:R$" + totalDescontos);
+		System.out.println("Salário Liquido:---------------------------------------------:R$" + salLiquido);
+	
 		scan.close();
 	}
 }
