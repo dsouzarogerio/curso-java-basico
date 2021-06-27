@@ -54,4 +54,4 @@ public class Exerc28 {
 		}
 		scan.close();
 	}
-}
+	}
